@@ -61,15 +61,15 @@ for x in test_points:
     y = eval_coefficients(x, poly_coeff)
     print(f"C({x}) = {y:.6f}")
 
-x_plot = np.linspace(6, 15, 200)
+x_plot = np.linspace(-5, 15, 200)
 y_lagrange = [lagrange(x, x_points, y_points) for x in x_plot]
 y_newton = [newton(x, x_points, newton_coeff) for x in x_plot]
 y_coeff = [eval_coefficients(x, poly_coeff) for x in x_plot]
 
 plt.figure(figsize=(10, 6))
 plt.plot(x_plot, y_lagrange, 'b-', linewidth=2, label='Многочлен Лагранжа')
-plt.plot(x_plot, y_newton, 'g--', linewidth=2, label='Многочлен Ньютона')
-plt.plot(x_plot, y_coeff, 'm:', linewidth=2, label='Через коэффициенты')
+plt.plot(x_plot, y_newton, 'g--', linewidth=4, label='Многочлен Ньютона')
+plt.plot(x_plot, y_coeff, 'm:', linewidth=5, label='Через коэффициенты')
 plt.plot(x_points, y_points, 'ro', markersize=8, label='Узлы интерполяции')
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.xlabel('x')
