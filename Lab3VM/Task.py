@@ -90,8 +90,8 @@ if choice == "1":
     plt.show()
 
 elif choice == "2":
-    func = lambda x: np.exp(-x)
-    name = 'exp(-x)'
+    func = lambda x: np.exp(x)
+    name = 'exp(x)'
     
     print(f"\n{name}")
     
