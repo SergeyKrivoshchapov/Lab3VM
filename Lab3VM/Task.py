@@ -1,3 +1,4 @@
+ 
 import matplotlib.pyplot as plt
 import numpy as np
 import time
@@ -89,8 +90,8 @@ if choice == "1":
     plt.show()
 
 elif choice == "2":
-    func = lambda x: np.exp(-x) * np.sin(2 * np.pi * x)
-    name = 'exp(-x)*sin(2πx)'
+    func = lambda x: np.exp(-x)
+    name = 'exp(-x)'
     
     print(f"\n{name}")
     
@@ -120,9 +121,9 @@ elif choice == "2":
     coeff_time = time.time() - start_time
     
     plt.plot(x_plot, y_true, 'k-', linewidth=2, label='Исходная функция', alpha=0.7)
-    plt.plot(x_plot, y_lagrange, 'b--', linewidth=1.5, label='Лагранж', alpha=0.8)
-    plt.plot(x_plot, y_newton, 'g-.', linewidth=1.5, label='Ньютон', alpha=0.8)
-    plt.plot(x_plot, y_coeff, 'r:', linewidth=1.5, label='Коэффициенты (СЛАУ)', alpha=0.8)
+    plt.plot(x_plot, y_lagrange, 'b--', linewidth=4, label='Лагранж', alpha=0.8)
+    plt.plot(x_plot, y_newton, 'g-.', linewidth=5, label='Ньютон', alpha=0.8)
+    plt.plot(x_plot, y_coeff, 'r:', linewidth=3, label='Коэффициенты (СЛАУ)', alpha=0.8)
     plt.plot(x_points, y_points, 'ro', markersize=6, label='Узлы интерполяции')
     
     plt.grid(True, linestyle='--', alpha=0.7)
@@ -139,11 +140,11 @@ elif choice == "2":
         max_diff_lag = np.max(np.abs(y_true - y_lagrange))
         max_diff_new = np.max(np.abs(y_true - y_newton))
         max_diff_coeff = np.max(np.abs(y_true - y_coeff))
-        print(f"Макс. погрешность Лагранжа: {max_diff_lag:.6f}")
-        print(f"Макс. погрешность Ньютона: {max_diff_new:.6f}")
-        print(f"Макс. погрешность СЛАУ: {max_diff_coeff:.6f}")
+        print(f"Максимальная погрешность Лагранжа: {max_diff_lag:.6f}")
+        print(f"Максимальная погрешность Ньютона: {max_diff_new:.6f}")
+        print(f"Максимальная погрешность СЛАУ: {max_diff_coeff:.6f}")
     
     plt.show()
 
 else:
-    print("Неверный выбор. Запустите программу снова.")
+    print("Неверный выбор")
