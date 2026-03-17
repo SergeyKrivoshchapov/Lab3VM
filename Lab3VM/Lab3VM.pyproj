@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3bb64f69-8bde-426a-9b5a-b8d36de92c54</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lab3VM.py</StartupFile>
+    <StartupFile>Polin.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Lab3VM</Name>
     <RootNamespace>Lab3VM</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Lab3VM.py" />
+    <Compile Include="Polin.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
